@@ -298,3 +298,6 @@ Module not found: Error: Can't resolve 'webpack/hot/emitter' in '/Users/tuyu/lea
 ℹ ｢wdm｣: Failed to compile.
 ```
 原因：webpack.config.js文件中extensions属性的值写错，即把'.js'和'.jsx'写做'js'和'jsx'少些了一个点号
+
+2. 错误把node_modules文件夹里的内容也加入了git版本控制
+删除.git文件，重新初始化.git文件，编写.gitignore文件后即可
