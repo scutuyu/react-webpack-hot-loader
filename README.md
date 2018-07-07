@@ -3,6 +3,11 @@ react-weback-hot-loader的空白项目
 [参考链接](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-project-setup)
 [参考项目](https://github.com/rwieruch/minimal-react-webpack-babel-setup)
 
+react,webpack都是使用当前最新版本
+react 16.x
+webpack 4.x
+webpack-cli 3.x
+
 - npm init -y
 - mkdir -p dist src
 - touch dist/index.html src/index.js webpack.config.js .babelrc
@@ -21,6 +26,10 @@ react-weback-hot-loader的空白项目
 - 安装ract-hot-loader
     ```
     cnpm install --save-dev react-hot-loader
+    ```
+- 安装style-loader, css-loader, less, less-loader
+    ```
+    cnpm install --save-dev style-loader css-loader less less-loader
     ```
 `.babelrc`
 ```json
@@ -301,3 +310,13 @@ Module not found: Error: Can't resolve 'webpack/hot/emitter' in '/Users/tuyu/lea
 
 2. 错误把node_modules文件夹里的内容也加入了git版本控制
 删除.git文件，重新初始化.git文件，编写.gitignore文件后即可
+
+3. pakage.json文件是一个json文件，如果属性之间少写了逗号，会报错误，比如：
+```
+SyntaxError: Unexpected string in JSON at position 460 (file: /Users/tuyu/test/react-webpack-hot-loader/package.json)
+    at JSON.parse (<anonymous>)
+    at Object.readJSON (/usr/local/lib/node_modules/cnpm/node_modules/npminstall/lib/utils.js:21:17)
+    at readJSON.next (<anonymous>)
+    at onFulfilled (/usr/local/lib/node_modules/cnpm/node_modules/co/index.js:65:19)
+    at <anonymous>
+```

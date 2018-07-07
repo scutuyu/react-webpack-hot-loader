@@ -7,12 +7,17 @@
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["empty", "react", "webpack", "hot-loader"],
+  "keywords": [
+    "empty",
+    "react",
+    "webpack",
+    "hot-loader"
+  ],
   "author": "scutuyu",
   "repository": {
     "type": "git",
     "url": "https://github.com/scutuyu/react-webpack-hot-loader.git"
-  }
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -20,7 +25,11 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "less": "^3.5.3",
+    "less-loader": "^4.1.0",
     "react-hot-loader": "^4.3.3",
+    "style-loader": "^0.21.0",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
